@@ -1,4 +1,4 @@
-<<script setup>
+<script setup>
 import { computed } from 'vue'
 
 // El componente recibe un país ya normalizado desde App.vue

@@ -195,8 +195,6 @@ function limpiarFiltros() {
       </section>
     </template>
   </main>
-</template>
-  </main>
 
   <footer class="pie">
     <p>Proyecto Unidad 3 · Programación Web · Grupo S5A</p>
