@@ -12,13 +12,13 @@ const busqueda = ref('')          // texto del campo de búsqueda (v-model)
 const regionSeleccionada = ref('') // región elegida en el <select> (v-model)
 const orden = ref('nombre')       // criterio de orden (v-model)
 
-  // Integrantes del equipo (se muestran en el pie con v-for)
+// Integrantes del equipo (se muestran en el pie con v-for)
 const integrantes = [
   'Fernández Culebro Sebastián Ali',
   'Gabriel Alejandro Cruz Guillen',
   'Ricardo Francisco Pinto Velasco',
 ]
-    
+
 // ─── Consumo de la API con fetch() ─────────────────────────────
 // Pide una "página" de países (la API pagina con limit y offset)
 async function obtenerPagina(offset) {
@@ -194,8 +194,6 @@ function limpiarFiltros() {
     </template>
   </main>
 
-  <footer class="pie">
-    Proyecto Unidad 3 · Vue 3 + API REST Countries
   <footer class="pie">
     <p>Proyecto Unidad 3 · Programación Web · Grupo S5A</p>
     <p>

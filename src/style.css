@@ -237,6 +237,10 @@ body {
 }
 
 /* ─── Pie ─── */
+.pie p {
+  margin: 0.2rem 0;
+}
+
 .pie {
   text-align: center;
   padding: 1.2rem;
