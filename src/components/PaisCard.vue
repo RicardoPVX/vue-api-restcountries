@@ -1,4 +1,4 @@
-<script setup>
+<<script setup>
 import { computed } from 'vue'
 
 // El componente recibe un país ya normalizado desde App.vue
@@ -54,6 +54,10 @@ const tamano = computed(() => {
           </dd>
         </div>
       </dl>
+      <div v-if="pais.wikipedia || pais.mapa" class="enlaces">
+        <a v-if="pais.mapa" :href="pais.mapa" target="_blank" rel="noopener">📍 Ver mapa</a>
+        <a v-if="pais.wikipedia" :href="pais.wikipedia" target="_blank" rel="noopener">📖 Wikipedia</a>
+      </div>
     </div>
   </article>
 </template>
