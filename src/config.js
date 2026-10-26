@@ -3,8 +3,8 @@ export const API_BASE = 'https://api.restcountries.com/countries/v5'
 
 // API key. Se lee de la variable de entorno VITE_RC_API_KEY
 // (archivo .env.local en tu compu, o secret de GitHub Actions al publicar).
-// Si no existe, se usa la key de demostración del enunciado.
-export const API_KEY = import.meta.env.VITE_RC_API_KEY || 'rc_live_demo'
+// Si no existe, se usa la key del proyecto (restringida a ricardopvx.github.io y localhost).
+export const API_KEY = import.meta.env.VITE_RC_API_KEY || 'rc_live_66f48e6de21649fe9c679e381a374e21'
 
 // Campos que pedimos a la API para no descargar información innecesaria
 export const CAMPOS =
