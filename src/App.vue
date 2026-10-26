@@ -83,6 +83,8 @@ function normalizarPais(p) {
     region: REGIONES[p.region] || p.region || 'Sin región',
     subregion: p.subregion || '',
     poblacion: p.population ?? 0,
+    wikipedia: p.links?.wikipedia || '',
+    mapa: p.links?.google_maps || '',
   }
 }
 
