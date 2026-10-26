@@ -1,0 +1,252 @@
+:root {
+  --azul: #0f2a4a;
+  --azul-medio: #1d4f8a;
+  --celeste: #4fb3e8;
+  --fondo: #f3f6fa;
+  --tarjeta: #ffffff;
+  --texto: #1c2733;
+  --texto-suave: #5b6b7c;
+  --borde: #dde5ee;
+  --rojo: #c0392b;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─── Encabezado ─── */
+.encabezado {
+  background: linear-gradient(135deg, var(--azul), var(--azul-medio) 60%, var(--celeste));
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  margin: 0.4rem 0 0;
+  opacity: 0.85;
+}
+
+/* ─── Contenido ─── */
+.contenedor {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.controles {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: -2.6rem;
+  background: var(--tarjeta);
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 42, 74, 0.12);
+}
+
+.campo {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--texto);
+}
+
+.campo:focus {
+  outline: 2px solid var(--celeste);
+  border-color: transparent;
+}
+
+.aviso {
+  margin: 1rem 0 0;
+  padding: 0.8rem 1rem;
+  background: #fff6e0;
+  border: 1px solid #f2d48a;
+  border-radius: 10px;
+  color: #7a5a00;
+}
+
+.contador {
+  margin: 1.25rem 0 0.75rem;
+  color: var(--texto-suave);
+}
+
+/* ─── Estados (carga, error, sin resultados) ─── */
+.estado {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--texto-suave);
+  font-size: 1.1rem;
+}
+
+.estado-error {
+  color: var(--rojo);
+}
+
+.spinner {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 1rem;
+  border: 5px solid var(--borde);
+  border-top-color: var(--azul-medio);
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.boton {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--azul-medio);
+  color: #fff;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: var(--azul);
+}
+
+/* ─── Tarjetas ─── */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+
+.tarjeta {
+  background: var(--tarjeta);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(15, 42, 74, 0.12);
+}
+
+.bandera {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: #e9eef4;
+  border-bottom: 1px solid var(--borde);
+}
+
+.cuerpo {
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.nombre {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  color: var(--azul);
+}
+
+.datos {
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.datos div {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.datos dt {
+  font-weight: 600;
+  min-width: 78px;
+}
+
+.datos dt::after {
+  content: ':';
+}
+
+.datos dd {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.subregion {
+  font-size: 0.85em;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  vertical-align: 1px;
+}
+
+.etiqueta-grande {
+  background: #fde2e1;
+  color: #a12a20;
+}
+
+.etiqueta-mediano {
+  background: #fff1d6;
+  color: #8a5a00;
+}
+
+.etiqueta-pequeno {
+  background: #dff3e6;
+  color: #1f7a45;
+}
+
+/* ─── Pie ─── */
+.pie {
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  border-top: 1px solid var(--borde);
+}
+
+@media (max-width: 720px) {
+  .controles {
+    grid-template-columns: 1fr;
+  }
+}
