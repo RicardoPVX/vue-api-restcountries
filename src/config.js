@@ -8,7 +8,7 @@ export const API_KEY = import.meta.env.VITE_RC_API_KEY || 'rc_live_demo'
 
 // Campos que pedimos a la API para no descargar información innecesaria
 export const CAMPOS =
-  'names.common,names.official,names.translations,capitals,flag.url_png,flag.url_svg,flag.emoji,flag.description,region,subregion,population,codes.alpha_3'
+  'names.common,names.official,names.translations,capitals,flag.url_png,flag.url_svg,flag.emoji,flag.description,region,subregion,population,codes.alpha_3,links.wikipedia,links.google_maps'
 
 // El plan gratuito permite máximo 100 países por petición
 export const LIMITE_POR_PAGINA = 100
