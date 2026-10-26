@@ -46,3 +46,11 @@ GitHub Pages en cada `push` a `main`. La key se guarda como secret
 ## Tecnologías
 
 Vue 3 (Composition API, `<script setup>`), Vite, GitHub Actions, GitHub Pages.
+
+## Equipo
+
+- Fernández Culebro Sebastián Ali
+- Gabriel Alejandro Cruz Guillen
+- Ricardo Francisco Pinto Velasco
+
+Grupo S5A · Ingeniería en Sistemas
